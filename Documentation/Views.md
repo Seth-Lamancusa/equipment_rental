@@ -10,7 +10,7 @@ This view displays each member and the total amount they have spent on rentals s
 	WHERE M.User_Id = O.User_Id
 	GROUP BY M.User_Id;
 
-The query implements the following relational algebra: $$\text{Cust\_Orders\_Value}\leftarrow\gamma_{\text{User\_Id},\text{Fname},\text{Lname},\text{Start\_Date},\text{SUM(Value)}}(\text{MEMBER}\bowtie_{\text{User\_Id}=\text{User\_Id}}\text{CUST\_ORDER})$$
+The query implements the following relational algebra (screenshot in Views Relational Algebra subdirectory for convenience): $$\text{Cust\_Orders\_Value}\leftarrow\gamma_{\text{User\_Id},\text{Fname},\text{Lname},\text{Start\_Date},\text{SUM(Value)}}(\text{MEMBER}\bowtie_{\text{User\_Id}=\text{User\_Id}}\text{CUST\_ORDER})$$
 
 Following are several line of example output.
 	
@@ -34,7 +34,7 @@ This view displays each drone, the total number of orders it has delivered, its 
 		JOIN SUPPLIER AS S ON D.Supp_Id = S.Supp_Id
 	GROUP BY D.Model_Num, D.Serial_Num, S.Name, D.Desc;
 
-The query implements the following relational algebra: $$\text{Drone\_Deliveries}\leftarrow\pi_{D.\text{Model\_Num},D.\text{Serial\_Num},D.\text{Desc},S.\text{Name},\text{SUM(I.Num\_Items)}\to\text{Orders\_Delivered}}\left(\sigma_{D.\text{Supp\_Id}=S.\text{Supp\_Id}\land D.\text{Fleet\_Id}=F.\text{Fleet\_Id}\land F.\text{Order\_Num}=I.\text{Order\_Num}}(D\bowtie F\bowtie I\bowtie S)\right)$$
+The query implements the following relational algebra (screenshot in Views Relational Algebra subdirectory for convenience): $$\text{Drone\_Deliveries}\leftarrow\pi_{D.\text{Model\_Num},D.\text{Serial\_Num},D.\text{Desc},S.\text{Name},\text{SUM(I.Num\_Items)}\to\text{Orders\_Delivered}}\left(\sigma_{D.\text{Supp\_Id}=S.\text{Supp\_Id}\land D.\text{Fleet\_Id}=F.\text{Fleet\_Id}\land F.\text{Order\_Num}=I.\text{Order\_Num}}(D\bowtie F\bowtie I\bowtie S)\right)$$
 
 Following are several lines of example output.
 

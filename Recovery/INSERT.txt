@@ -1,146 +1,269 @@
 -- Table: CUST_ORDER
-CREATE TABLE IF NOT EXISTS CUST_ORDER (
-    Order_Num char(8) not null,
-    Value int,
-    Date date,
-    Return_Date date,
-    Return_Status int, --1 if returned, 0 if not
-    Model_Num char(8) not null,
-    Serial_Num char(8) not null,
-    User_Id char(8) not null,
-    primary key(Order_Num),
-    foreign key(Model_Num, Serial_Num) references EQUIPMENT(Model_Num, Serial_Num) ON
-    UPDATE SET NULL,
-    foreign key(User_Id) references MEMBER(User_Id) ON UPDATE CASCADE
-);
+INSERT INTO CUST_ORDER (Order_Num, Value, Order_Date, Return_date, Return_Status, Inv_Id, Fleet_Id, User_Id) VALUES ('COR00001', 1500, '2022-01-01', '2022-01-05', 1, 'INV00001', 'F0000001', 'USR00001');
+INSERT INTO CUST_ORDER (Order_Num, Value, Order_Date, Return_date, Return_Status, Inv_Id, Fleet_Id, User_Id) VALUES ('COR00002', 2000, '2022-01-02', '2022-01-07', 2, 'INV00002', 'F0000002', 'USR00002');
+INSERT INTO CUST_ORDER (Order_Num, Value, Order_Date, Return_date, Return_Status, Inv_Id, Fleet_Id, User_Id) VALUES ('COR00003', 500, '2022-01-03', NULL, 0, 'INV00003', 'F0000003', 'USR00003');
+INSERT INTO CUST_ORDER (Order_Num, Value, Order_Date, Return_date, Return_Status, Inv_Id, Fleet_Id, User_Id) VALUES ('COR00004', 1000, '2022-01-04', NULL, 0, 'INV00004', 'F0000004', 'USR00004');
+INSERT INTO CUST_ORDER (Order_Num, Value, Order_Date, Return_date, Return_Status, Inv_Id, Fleet_Id, User_Id) VALUES ('COR00005', 750, '2022-01-05', '2022-01-10', 1, 'INV00005', 'F0000005', 'USR00005');
+INSERT INTO CUST_ORDER (Order_Num, Value, Order_Date, Return_date, Return_Status, Inv_Id, Fleet_Id, User_Id) VALUES ('COR00006', 3000, '2022-01-06', '2022-01-13', 2, 'INV00006', 'F0000006', 'USR00006');
+INSERT INTO CUST_ORDER (Order_Num, Value, Order_Date, Return_date, Return_Status, Inv_Id, Fleet_Id, User_Id) VALUES ('COR00007', 200, '2022-01-07', NULL, 0, 'INV00007', 'F0000007', 'USR00007');
+INSERT INTO CUST_ORDER (Order_Num, Value, Order_Date, Return_date, Return_Status, Inv_Id, Fleet_Id, User_Id) VALUES ('COR00008', 1000, '2022-01-08', NULL, 0, 'INV00008', 'F0000008', 'USR00008');
+INSERT INTO CUST_ORDER (Order_Num, Value, Order_Date, Return_date, Return_Status, Inv_Id, Fleet_Id, User_Id) VALUES ('COR00009', 1200, '2022-01-09', '2022-01-14', 1, 'INV00009', 'F0000009', 'USR00009');
+INSERT INTO CUST_ORDER (Order_Num, Value, Order_Date, Return_date, Return_Status, Inv_Id, Fleet_Id, User_Id) VALUES ('COR00010', 800, '2022-01-10', NULL, 0, 'INV00010', 'F0000010', 'USR00010');
+INSERT INTO CUST_ORDER (Order_Num, Value, Order_Date, Return_date, Return_Status, Inv_Id, Fleet_Id, User_Id) VALUES ('COR00011', 1500, '2022-01-11', NULL, 0, 'INV00011', 'F0000011', 'USR00011');
+INSERT INTO CUST_ORDER (Order_Num, Value, Order_Date, Return_date, Return_Status, Inv_Id, Fleet_Id, User_Id) VALUES ('COR00012', 2000, '2022-01-12', '2022-01-17', 1, 'INV00012', 'F0000012', 'USR00012');
+INSERT INTO CUST_ORDER (Order_Num, Value, Order_Date, Return_date, Return_Status, Inv_Id, Fleet_Id, User_Id) VALUES ('COR00013', 3000, '2022-01-13', '2022-01-20', 2, 'INV00013', 'F0000013', 'USR00013');
+INSERT INTO CUST_ORDER (Order_Num, Value, Order_Date, Return_date, Return_Status, Inv_Id, Fleet_Id, User_Id) VALUES ('COR00014', 500, '2022-01-14', NULL, 0, 'INV00014', 'F0000014', 'USR00014');
+INSERT INTO CUST_ORDER (Order_Num, Value, Order_Date, Return_date, Return_Status, Inv_Id, Fleet_Id, User_Id) VALUES ('COR00015', 1000, '2022-01-15', NULL, 0, 'INV00015', 'F0000015', 'USR00015');
+INSERT INTO CUST_ORDER (Order_Num, Value, Order_Date, Return_date, Return_Status, Inv_Id, Fleet_Id, User_Id) VALUES ('COR00016', 750, '2022-01-16', '2022-01-21', 1, 'INV00016', 'F0000016', 'USR00016');
+INSERT INTO CUST_ORDER (Order_Num, Value, Order_Date, Return_date, Return_Status, Inv_Id, Fleet_Id, User_Id) VALUES ('COR00017', 3000, '2022-01-17', '2022-01-24', 1, 'INV00017', 'F0000017', 'USR00017');
+INSERT INTO CUST_ORDER (Order_Num, Value, Order_Date, Return_date, Return_Status, Inv_Id, Fleet_Id, User_Id) VALUES ('COR00018', 200, '2022-01-18', NULL, 0, 'INV00018', 'F0000018', 'USR00018');
+INSERT INTO CUST_ORDER (Order_Num, Value, Order_Date, Return_date, Return_Status, Inv_Id, Fleet_Id, User_Id) VALUES ('COR00019', 1000, '2022-01-19', NULL, 0, 'INV00019', 'F0000019', 'USR00019');
+INSERT INTO CUST_ORDER (Order_Num, Value, Order_Date, Return_date, Return_Status, Inv_Id, Fleet_Id, User_Id) VALUES ('COR00020', 1200, '2022-01-20', '2022-01-25', 1, 'INV00020', 'F0000020', 'USR00020');
+INSERT INTO CUST_ORDER (Order_Num, Value, Order_Date, Return_date, Return_Status, Inv_Id, Fleet_Id, User_Id) VALUES ('COR00021', 1500, '2022-01-01', '2022-01-05', 1, 'INV00001', 'F0000001', 'USR00001');
 
 -- Table: DRONE
-CREATE TABLE IF NOT EXISTS DRONE (
-    Model_Num char(8) not null,
-    Serial_Num char(8) not null,
-    Year char(4) not null,
-    Desc varchar(50),
-    Fleet_Id char(8) not null,
-    Weight_Cap int,
-    Volume_Cap int,
-    Dist_Auth varchar(4),
-    Max_Speed int,
-    Status int not null, -- 1 if in use, 0 if discontinued
-    Addr varchar(30) not null,
-    City varchar(30) not null,
-    Supp_Id char(8) not null,
-    primary key(Model_Num, Serial_Num),
-    foreign key(Addr, City) references WAREHOUSE(Addr, City) ON UPDATE CASCADE,
-    foreign key(Supp_Id) references SUPPLIER(Supp_Id) ON UPDATE SET NULL
-);
+INSERT INTO DRONE (Fleet_Id, Model_Num, Serial_Num, Year, "Desc", Warr_Exp, Weight_Cap, Volume_Cap, Dist_Auth, Max_Speed, Status, Addr, City, Supp_Id) VALUES ('F0000001', 'M1000000', 'S0000021', '2022', 'Small drone for personal use', NULL, 2, 4, '100', 80, 1, '456 Elm St', 'Othertown', 'SUP00001');
+INSERT INTO DRONE (Fleet_Id, Model_Num, Serial_Num, Year, "Desc", Warr_Exp, Weight_Cap, Volume_Cap, Dist_Auth, Max_Speed, Status, Addr, City, Supp_Id) VALUES ('F0000002', 'M2000000', 'S0000022', '2021', 'Medium drone for aerial photography', NULL, 4, 8, '500', 100, 2, '789 Oak St', 'Anotherplace', 'SUP00002');
+INSERT INTO DRONE (Fleet_Id, Model_Num, Serial_Num, Year, "Desc", Warr_Exp, Weight_Cap, Volume_Cap, Dist_Auth, Max_Speed, Status, Addr, City, Supp_Id) VALUES ('F0000003', 'M3000000', 'S0000023', '2022', 'Large drone for military use', NULL, 8, 12, '2000', 200, 1, '123 Main St', 'Anytown', 'SUP00003');
+INSERT INTO DRONE (Fleet_Id, Model_Num, Serial_Num, Year, "Desc", Warr_Exp, Weight_Cap, Volume_Cap, Dist_Auth, Max_Speed, Status, Addr, City, Supp_Id) VALUES ('F0000004', 'M4000000', 'S0000024', '2021', 'Small drone for agricultural use', NULL, 2, 4, '50', 60, 2, '456 Elm St', 'Othertown', 'SUP00004');
+INSERT INTO DRONE (Fleet_Id, Model_Num, Serial_Num, Year, "Desc", Warr_Exp, Weight_Cap, Volume_Cap, Dist_Auth, Max_Speed, Status, Addr, City, Supp_Id) VALUES ('F0000005', 'M5000000', 'S0000025', '2022', 'Medium drone for search and rescue', NULL, 4, 8, '1000', 150, 1, '789 Oak St', 'Anotherplace', 'SUP00005');
+INSERT INTO DRONE (Fleet_Id, Model_Num, Serial_Num, Year, "Desc", Warr_Exp, Weight_Cap, Volume_Cap, Dist_Auth, Max_Speed, Status, Addr, City, Supp_Id) VALUES ('F0000006', 'M6000000', 'S0000026', '2021', 'Large drone for surveying', NULL, 8, 12, '500', 120, 1, '123 Main St', 'Anytown', 'SUP00006');
+INSERT INTO DRONE (Fleet_Id, Model_Num, Serial_Num, Year, "Desc", Warr_Exp, Weight_Cap, Volume_Cap, Dist_Auth, Max_Speed, Status, Addr, City, Supp_Id) VALUES ('F0000007', 'M7000000', 'S0000027', '2022', 'Small drone for environmental monitoring', NULL, 2, 4, '200', 90, 1, '456 Elm St', 'Othertown', 'SUP00007');
+INSERT INTO DRONE (Fleet_Id, Model_Num, Serial_Num, Year, "Desc", Warr_Exp, Weight_Cap, Volume_Cap, Dist_Auth, Max_Speed, Status, Addr, City, Supp_Id) VALUES ('F0000008', 'M8000000', 'S0000028', '2021', 'Medium drone for inspection', NULL, 4, 8, '500', 100, 2, '789 Oak St', 'Anotherplace', 'SUP00008');
+INSERT INTO DRONE (Fleet_Id, Model_Num, Serial_Num, Year, "Desc", Warr_Exp, Weight_Cap, Volume_Cap, Dist_Auth, Max_Speed, Status, Addr, City, Supp_Id) VALUES ('F0000009', 'M9000000', 'S0000029', '2022', 'Large drone for construction', NULL, 8, 12, '1000', 150, 1, '123 Main St', 'Anytown', 'SUP00009');
+INSERT INTO DRONE (Fleet_Id, Model_Num, Serial_Num, Year, "Desc", Warr_Exp, Weight_Cap, Volume_Cap, Dist_Auth, Max_Speed, Status, Addr, City, Supp_Id) VALUES ('F0000010', 'M1100000', 'S0000030', '2021', 'Small drone for surveying', NULL, 2, 4, '100', 80, 1, '456 Elm St', 'Othertown', 'SUP00001');
+INSERT INTO DRONE (Fleet_Id, Model_Num, Serial_Num, Year, "Desc", Warr_Exp, Weight_Cap, Volume_Cap, Dist_Auth, Max_Speed, Status, Addr, City, Supp_Id) VALUES ('F0000011', 'M1200000', 'S0000031', '2022', 'Medium drone for aerial photography', NULL, 4, 8, '500', 100, 2, '789 Oak St', 'Anotherplace', 'SUP00002');
+INSERT INTO DRONE (Fleet_Id, Model_Num, Serial_Num, Year, "Desc", Warr_Exp, Weight_Cap, Volume_Cap, Dist_Auth, Max_Speed, Status, Addr, City, Supp_Id) VALUES ('F0000012', 'M1300000', 'S0000032', '2021', 'Large drone for military use', NULL, 8, 12, '2000', 200, 1, '123 Main St', 'Anytown', 'SUP00003');
+INSERT INTO DRONE (Fleet_Id, Model_Num, Serial_Num, Year, "Desc", Warr_Exp, Weight_Cap, Volume_Cap, Dist_Auth, Max_Speed, Status, Addr, City, Supp_Id) VALUES ('F0000013', 'M1400000', 'S0000033', '2022', 'Small drone for personal use', NULL, 2, 4, '100', 80, 1, '456 Elm St', 'Othertown', 'SUP00003');
+INSERT INTO DRONE (Fleet_Id, Model_Num, Serial_Num, Year, "Desc", Warr_Exp, Weight_Cap, Volume_Cap, Dist_Auth, Max_Speed, Status, Addr, City, Supp_Id) VALUES ('F0000014', 'M1500000', 'S0000023', '2022', 'Medium drone for aerial surveying', NULL, 4, 8, '500', 120, 1, '123 Main St', 'Anytown', 'SUP00006');
+INSERT INTO DRONE (Fleet_Id, Model_Num, Serial_Num, Year, "Desc", Warr_Exp, Weight_Cap, Volume_Cap, Dist_Auth, Max_Speed, Status, Addr, City, Supp_Id) VALUES ('F0000015', 'M1600000', 'S0000024', '2021', 'Large drone for cargo transportation', NULL, 8, 12, '1000', 150, 2, '456 Elm St', 'Othertown', 'SUP00008');
+INSERT INTO DRONE (Fleet_Id, Model_Num, Serial_Num, Year, "Desc", Warr_Exp, Weight_Cap, Volume_Cap, Dist_Auth, Max_Speed, Status, Addr, City, Supp_Id) VALUES ('F0000016', 'M1700000', 'S0000025', '2022', 'Small drone for personal use', NULL, 2, 4, '100', 80, 1, '789 Oak St', 'Anotherplace', 'SUP00009');
+INSERT INTO DRONE (Fleet_Id, Model_Num, Serial_Num, Year, "Desc", Warr_Exp, Weight_Cap, Volume_Cap, Dist_Auth, Max_Speed, Status, Addr, City, Supp_Id) VALUES ('F0000017', 'M1800000', 'S0000026', '2021', 'Medium drone for film making', NULL, 4, 8, '500', 100, 2, '123 Main St', 'Anytown', 'SUP00002');
+INSERT INTO DRONE (Fleet_Id, Model_Num, Serial_Num, Year, "Desc", Warr_Exp, Weight_Cap, Volume_Cap, Dist_Auth, Max_Speed, Status, Addr, City, Supp_Id) VALUES ('F0000018', 'M1900000', 'S0000027', '2022', 'Large drone for disaster response', NULL, 8, 12, '2000', 200, 1, '456 Elm St', 'Othertown', 'SUP00003');
+INSERT INTO DRONE (Fleet_Id, Model_Num, Serial_Num, Year, "Desc", Warr_Exp, Weight_Cap, Volume_Cap, Dist_Auth, Max_Speed, Status, Addr, City, Supp_Id) VALUES ('F0000019', 'M2000000', 'S0000028', '2021', 'Small drone for agriculture use', NULL, 2, 4, '50', 60, 2, '789 Oak St', 'Anotherplace', 'SUP00001');
+INSERT INTO DRONE (Fleet_Id, Model_Num, Serial_Num, Year, "Desc", Warr_Exp, Weight_Cap, Volume_Cap, Dist_Auth, Max_Speed, Status, Addr, City, Supp_Id) VALUES ('F0000020', 'M2100000', 'S0000029', '2022', 'Medium drone for traffic monitoring', NULL, 4, 8, '1000', 150, 1, '123 Main St', 'Anytown', 'SUP00005');
+INSERT INTO DRONE (Fleet_Id, Model_Num, Serial_Num, Year, "Desc", Warr_Exp, Weight_Cap, Volume_Cap, Dist_Auth, Max_Speed, Status, Addr, City, Supp_Id) VALUES ('F0000021', 'M2200000', 'S0000030', '2021', 'Large drone for power line inspection', NULL, 8, 12, '500', 120, 1, '456 Elm St', 'Othertown', 'SUP00003');
+INSERT INTO DRONE (Fleet_Id, Model_Num, Serial_Num, Year, "Desc", Warr_Exp, Weight_Cap, Volume_Cap, Dist_Auth, Max_Speed, Status, Addr, City, Supp_Id) VALUES ('F0000022', 'M2300000', 'S0000031', '2022', 'Small drone for environmental monitoring', NULL, 2, 4, '200', 90, 1, '789 Oak St', 'Anotherplace', 'SUP00001');
+INSERT INTO DRONE (Fleet_Id, Model_Num, Serial_Num, Year, "Desc", Warr_Exp, Weight_Cap, Volume_Cap, Dist_Auth, Max_Speed, Status, Addr, City, Supp_Id) VALUES ('F0000023', 'M2400000', 'S0000032', '2021', 'Medium drone for wildlife monitoring', NULL, 4, 8, '500', 100, 2, '123 Main St', 'Anytown', 'SUP00005');
 
 -- Table: EMPLOYEE
-CREATE TABLE IF NOT EXISTS EMPLOYEE (
-    Ssn char(9) not null,
-    Fname varchar(15) not null,
-    Lname varchar(15) not null,
-    Addr varchar(30),
-    Phone char(10),
-    Email varchar(40),
-    Salary int,
-    primary key(Ssn)
-);
+INSERT INTO EMPLOYEE (Ssn, Fname, Lname, Addr, Phone, Email, Salary) VALUES ('123456789', 'John', 'Doe', '123 Main St', '1235551234', 'jdoe@email.com', 60000);
+INSERT INTO EMPLOYEE (Ssn, Fname, Lname, Addr, Phone, Email, Salary) VALUES ('234567890', 'Jane', 'Smith', '456 Elm St', '1235555678', 'jsmith@email.com', 75000);
+INSERT INTO EMPLOYEE (Ssn, Fname, Lname, Addr, Phone, Email, Salary) VALUES ('345678901', 'Mark', 'Johnson', '789 Oak St', '1235559012', 'mjohnson@email.com', 80000);
+INSERT INTO EMPLOYEE (Ssn, Fname, Lname, Addr, Phone, Email, Salary) VALUES ('456789012', 'Susan', 'Brown', '987 Pine St', '1235553456', 'sbrown@email.com', 65000);
+INSERT INTO EMPLOYEE (Ssn, Fname, Lname, Addr, Phone, Email, Salary) VALUES ('567890123', 'David', 'Lee', '321 Maple St', '1235556789', 'dlee@email.com', 70000);
+INSERT INTO EMPLOYEE (Ssn, Fname, Lname, Addr, Phone, Email, Salary) VALUES ('678901234', 'Karen', 'Wilson', '654 Birch St', '1235550123', 'kwilson@email.com', 85000);
+INSERT INTO EMPLOYEE (Ssn, Fname, Lname, Addr, Phone, Email, Salary) VALUES ('789012345', 'Michael', 'Taylor', '876 Cedar St', '1235554567', 'mtaylor@email.com', 75000);
+INSERT INTO EMPLOYEE (Ssn, Fname, Lname, Addr, Phone, Email, Salary) VALUES ('890123456', 'Lisa', 'Garcia', '543 Oak St', '1235557890', 'lgarcia@email.com', 90000);
+INSERT INTO EMPLOYEE (Ssn, Fname, Lname, Addr, Phone, Email, Salary) VALUES ('901234567', 'Daniel', 'Hernandez', '210 Pine St', '1235551234', 'dhernandez@email.com', 80000);
+INSERT INTO EMPLOYEE (Ssn, Fname, Lname, Addr, Phone, Email, Salary) VALUES ('012345678', 'Emily', 'Nguyen', '111 Elm St', '1235555678', 'enguyen@email.com', 70000);
+INSERT INTO EMPLOYEE (Ssn, Fname, Lname, Addr, Phone, Email, Salary) VALUES ('123232323', 'Tim', 'Smith', '23 Main St', '1235552323', 'tsmith@email.com', 72000);
+INSERT INTO EMPLOYEE (Ssn, Fname, Lname, Addr, Phone, Email, Salary) VALUES ('232232323', 'Hilary', 'Clinton', '232 Main St', '1235552323', 'hclinton@email.com', 120000);
+INSERT INTO EMPLOYEE (Ssn, Fname, Lname, Addr, Phone, Email, Salary) VALUES ('343232323', 'Donald', 'Trump', '343 Main St', '1235552323', 'dtrump@email.com', 125000);
+INSERT INTO EMPLOYEE (Ssn, Fname, Lname, Addr, Phone, Email, Salary) VALUES ('454232323', 'Michelle', 'Obama', '454 Main St', '1235552323', 'michelleobama@email.com', 130000);
+INSERT INTO EMPLOYEE (Ssn, Fname, Lname, Addr, Phone, Email, Salary) VALUES ('565232323', 'George', 'Bush', '565 Main St', '1235552323', 'georgebush@email.com', 110000);
+INSERT INTO EMPLOYEE (Ssn, Fname, Lname, Addr, Phone, Email, Salary) VALUES ('676232323', 'Barack', 'Obama', '676 Main St', '1235552323', 'barackobama@email.com', 135000);
+INSERT INTO EMPLOYEE (Ssn, Fname, Lname, Addr, Phone, Email, Salary) VALUES ('787232323', 'Joe', 'Biden', '787 Main St', '1235552323', 'joebiden@email.com', 140000);
+INSERT INTO EMPLOYEE (Ssn, Fname, Lname, Addr, Phone, Email, Salary) VALUES ('898232323', 'Kamala', 'Harris', '898 Main St', '1235552323', 'kamalaharris@email.com', 145000);
+INSERT INTO EMPLOYEE (Ssn, Fname, Lname, Addr, Phone, Email, Salary) VALUES ('909232323', 'Bill', 'Clinton', '909 Main St', '1235552323', 'billclinton@email.com', 125000);
+INSERT INTO EMPLOYEE (Ssn, Fname, Lname, Addr, Phone, Email, Salary) VALUES ('111223334', 'Samantha', 'Jones', '123 Main St, Apt 4B', '1235551234', 'sjones@gmail.com', 75000);
 
 -- Table: EQUIPMENT
-CREATE TABLE IF NOT EXISTS EQUIPMENT (
-    Model_Num char(8) not null,
-    Serial_Num char(8) not null,
-    Year char(4),
-    Desc varchar(50),
-    Warr_Exp date,
-    Inv_Id char(8) not null,
-    Type varchar(15),? Weight int,
-    Arrival_Date date,
-    Size varchar(2),
-    Addr varchar(30) not null,
-    City varchar(30) not null,
-    Supp_Id char(8) not null,
-    primary key(Model_Num, Serial_Num),
-    foreign key(Addr, City) references WAREHOUSE(Addr, City) ON UPDATE CASCADE,
-    foreign key(Supp_Id) references SUPPLIER(Supp_Id) ON UPDATE SET NULL
-);
+INSERT INTO EQUIPMENT (Inv_Id, Model_Num, Serial_Num, Year, "Desc", Warr_Exp, Type, Weight, Arrival_Date, Size, Addr, City, Supp_Id) VALUES ('INV00001', 'MDL00001', 'SER00001', '2021', 'Laptop', '2025-03-10', 'Electronic', 5, '2021-03-01', 'M', '123 Main St', 'Anytown', 'SUP00001');
+INSERT INTO EQUIPMENT (Inv_Id, Model_Num, Serial_Num, Year, "Desc", Warr_Exp, Type, Weight, Arrival_Date, Size, Addr, City, Supp_Id) VALUES ('INV00002', 'MDL00002', 'SER00002', '2021', 'Desktop', '2025-03-11', 'Electronic', 10, '2021-03-02', 'L', '456 Elm St', 'Anytown', 'SUP00002');
+INSERT INTO EQUIPMENT (Inv_Id, Model_Num, Serial_Num, Year, "Desc", Warr_Exp, Type, Weight, Arrival_Date, Size, Addr, City, Supp_Id) VALUES ('INV00003', 'MDL00003', 'SER00003', '2022', 'Printer', '2026-03-12', 'Electronic', 20, '2021-03-03', 'S', '789 Oak St', 'Anytown', 'SUP00003');
+INSERT INTO EQUIPMENT (Inv_Id, Model_Num, Serial_Num, Year, "Desc", Warr_Exp, Type, Weight, Arrival_Date, Size, Addr, City, Supp_Id) VALUES ('INV00004', 'MDL00004', 'SER00004', '2022', 'Scanner', '2026-03-13', 'Electronic', 15, '2021-03-04', 'M', '987 Pine St', 'Anytown', 'SUP00004');
+INSERT INTO EQUIPMENT (Inv_Id, Model_Num, Serial_Num, Year, "Desc", Warr_Exp, Type, Weight, Arrival_Date, Size, Addr, City, Supp_Id) VALUES ('INV00005', 'MDL00005', 'SER00005', '2023', 'Projector', '2027-03-14', 'Electronic', 25, '2021-03-05', 'L', '321 Maple St', 'Anytown', 'SUP00005');
+INSERT INTO EQUIPMENT (Inv_Id, Model_Num, Serial_Num, Year, "Desc", Warr_Exp, Type, Weight, Arrival_Date, Size, Addr, City, Supp_Id) VALUES ('INV00006', 'MDL00006', 'SER00006', '2023', 'Monitor', '2027-03-15', 'Electronic', 8, '2021-03-06', 'S', '654 Birch St', 'Anytown', 'SUP00006');
+INSERT INTO EQUIPMENT (Inv_Id, Model_Num, Serial_Num, Year, "Desc", Warr_Exp, Type, Weight, Arrival_Date, Size, Addr, City, Supp_Id) VALUES ('INV00007', 'MDL00007', 'SER00007', '2024', 'Camera', '2028-03-16', 'Electronic', 7, '2021-03-07', 'M', '876 Cedar St', 'Anytown', 'SUP00007');
+INSERT INTO EQUIPMENT (Inv_Id, Model_Num, Serial_Num, Year, "Desc", Warr_Exp, Type, Weight, Arrival_Date, Size, Addr, City, Supp_Id) VALUES ('INV00008', 'MDL00008', 'SER00008', '2024', 'Router', '2028-03-17', 'Electronic', 4, '2021-03-08', 'L', '543 Oak St', 'Anytown', 'SUP00008');
+INSERT INTO EQUIPMENT (Inv_Id, Model_Num, Serial_Num, Year, "Desc", Warr_Exp, Type, Weight, Arrival_Date, Size, Addr, City, Supp_Id) VALUES ('INV00009', 'MDL00009', 'SER00009', '2025', 'Mouse', '2029-03-18', 'Electronic', 1, '2021-03-09', 'S', '210 Pine St', 'Anytown', 'SUP00009');
+INSERT INTO EQUIPMENT (Inv_Id, Model_Num, Serial_Num, Year, "Desc", Warr_Exp, Type, Weight, Arrival_Date, Size, Addr, City, Supp_Id) VALUES ('INV00010', 'MDL00010', 'SER00010', '2025', 'Keyboard', '2029-03-19', 'Electronic', 2, '2021-03-10', 'M', '111 Elm St', 'Anytown', 'SUP00010');
+INSERT INTO EQUIPMENT (Inv_Id, Model_Num, Serial_Num, Year, "Desc", Warr_Exp, Type, Weight, Arrival_Date, Size, Addr, City, Supp_Id) VALUES ('INV00011', 'MDL00011', 'SER00011', '2021', 'TV', '2025-03-20', 'Electronic', 30, '2021-03-11', 'L', '123 Main St', 'Anytown', 'SUP00011');
+INSERT INTO EQUIPMENT (Inv_Id, Model_Num, Serial_Num, Year, "Desc", Warr_Exp, Type, Weight, Arrival_Date, Size, Addr, City, Supp_Id) VALUES ('INV00012', 'MDL00012', 'SER00012', '2022', 'Camera', '2026-03-21', 'Electronic', 9, '2021-03-12', 'S', '456 Elm St', 'Anytown', 'SUP00012');
+INSERT INTO EQUIPMENT (Inv_Id, Model_Num, Serial_Num, Year, "Desc", Warr_Exp, Type, Weight, Arrival_Date, Size, Addr, City, Supp_Id) VALUES ('INV00013', 'MDL00013', 'SER00014', '2024', 'Smartphone', '2028-03-30', 'Electronic', 0.5, '2021-03-21', 'S', '543 Oak St', 'Anytown', 'SUP00013');
+INSERT INTO EQUIPMENT (Inv_Id, Model_Num, Serial_Num, Year, "Desc", Warr_Exp, Type, Weight, Arrival_Date, Size, Addr, City, Supp_Id) VALUES ('INV00014', 'MDL00014', 'SER00014', '2021', 'Laptop', '2025-03-10', 'Electronic', 5, '2021-03-01', 'M', '123 Main St', 'Anytown', 'SUP00014');
+INSERT INTO EQUIPMENT (Inv_Id, Model_Num, Serial_Num, Year, "Desc", Warr_Exp, Type, Weight, Arrival_Date, Size, Addr, City, Supp_Id) VALUES ('INV00015', 'MDL00015', 'SER00015', '2021', 'Desktop', '2025-03-11', 'Electronic', 10, '2021-03-02', 'L', '456 Elm St', 'Anytown', 'SUP00015');
+INSERT INTO EQUIPMENT (Inv_Id, Model_Num, Serial_Num, Year, "Desc", Warr_Exp, Type, Weight, Arrival_Date, Size, Addr, City, Supp_Id) VALUES ('INV00016', 'MDL00016', 'SER00016', '2022', 'Printer', '2026-03-12', 'Electronic', 20, '2021-03-03', 'S', '789 Oak St', 'Anytown', 'SUP00016');
+INSERT INTO EQUIPMENT (Inv_Id, Model_Num, Serial_Num, Year, "Desc", Warr_Exp, Type, Weight, Arrival_Date, Size, Addr, City, Supp_Id) VALUES ('INV00017', 'MDL00017', 'SER00017', '2022', 'Scanner', '2026-03-13', 'Electronic', 15, '2021-03-04', 'M', '987 Pine St', 'Anytown', 'SUP00017');
+INSERT INTO EQUIPMENT (Inv_Id, Model_Num, Serial_Num, Year, "Desc", Warr_Exp, Type, Weight, Arrival_Date, Size, Addr, City, Supp_Id) VALUES ('INV00018', 'MDL00018', 'SER00018', '2023', 'Projector', '2027-03-14', 'Electronic', 25, '2021-03-05', 'L', '321 Maple St', 'Anytown', 'SUP00018');
+INSERT INTO EQUIPMENT (Inv_Id, Model_Num, Serial_Num, Year, "Desc", Warr_Exp, Type, Weight, Arrival_Date, Size, Addr, City, Supp_Id) VALUES ('INV00019', 'MDL00019', 'SER00019', '2023', 'Monitor', '2027-03-15', 'Electronic', 8, '2021-03-06', 'S', '654 Birch St', 'Anytown', 'SUP00019');
+INSERT INTO EQUIPMENT (Inv_Id, Model_Num, Serial_Num, Year, "Desc", Warr_Exp, Type, Weight, Arrival_Date, Size, Addr, City, Supp_Id) VALUES ('INV00020', 'MDL00020', 'SER00020', '2024', 'Camera', '2028-03-16', 'Electronic', 7, '2021-03-07', 'M', '876 Cedar St', 'Anytown', 'SUP00020');
+INSERT INTO EQUIPMENT (Inv_Id, Model_Num, Serial_Num, Year, "Desc", Warr_Exp, Type, Weight, Arrival_Date, Size, Addr, City, Supp_Id) VALUES ('INV00021', 'MDL00021', 'SER00021', '2024', 'Router', '2028-03-17', 'Electronic', 4, '2021-03-08', 'L', '543 Oak St', 'Anytown', 'SUP00001');
+INSERT INTO EQUIPMENT (Inv_Id, Model_Num, Serial_Num, Year, "Desc", Warr_Exp, Type, Weight, Arrival_Date, Size, Addr, City, Supp_Id) VALUES ('INV00022', 'MDL00022', 'SER00022', '2025', 'Mouse', '2029-03-18', 'Electronic', 1, '2021-03-09', 'S', '210 Pine St', 'Anytown', 'SUP00002');
+INSERT INTO EQUIPMENT (Inv_Id, Model_Num, Serial_Num, Year, "Desc", Warr_Exp, Type, Weight, Arrival_Date, Size, Addr, City, Supp_Id) VALUES ('INV00023', 'MDL00023', 'SER00023', '2025', 'Keyboard', '2029-03-19', 'Electronic', 2, '2021-03-10', 'M', '111 Elm St', 'Anytown', 'SUP00002');
 
 -- Table: FOR_DRONE
-CREATE TABLE IF NOT EXISTS FOR_DRONE (
-    Order_Num char(8) not null,
-    Model_Num char(8) not null,
-    Serial_Num char(8) not null,
-    foreign key(Order_Num) references INV_ORDER(Order_Num) ON UPDATE CASCADE,
-    foreign key(Model_Num, Serial_Num) references DRONE(Model_Num, Serial_Num) ON
-    UPDATE CASCADE
-);
+INSERT INTO FOR_DRONE (Order_Num, Fleet_Id) VALUES ('ORD00001', 'F0000001');
+INSERT INTO FOR_DRONE (Order_Num, Fleet_Id) VALUES ('ORD00002', 'F0000002');
+INSERT INTO FOR_DRONE (Order_Num, Fleet_Id) VALUES ('ORD00003', 'F0000003');
+INSERT INTO FOR_DRONE (Order_Num, Fleet_Id) VALUES ('ORD00004', 'F0000004');
+INSERT INTO FOR_DRONE (Order_Num, Fleet_Id) VALUES ('ORD00005', 'F0000005');
+INSERT INTO FOR_DRONE (Order_Num, Fleet_Id) VALUES ('ORD00006', 'F0000006');
+INSERT INTO FOR_DRONE (Order_Num, Fleet_Id) VALUES ('ORD00007', 'F0000007');
+INSERT INTO FOR_DRONE (Order_Num, Fleet_Id) VALUES ('ORD00008', 'F0000007');
+INSERT INTO FOR_DRONE (Order_Num, Fleet_Id) VALUES ('ORD00009', 'F0000008');
+INSERT INTO FOR_DRONE (Order_Num, Fleet_Id) VALUES ('ORD00009', 'F0000009');
+INSERT INTO FOR_DRONE (Order_Num, Fleet_Id) VALUES ('ORD00010', 'F0000010');
+INSERT INTO FOR_DRONE (Order_Num, Fleet_Id) VALUES ('ORD00011', 'F0000011');
+INSERT INTO FOR_DRONE (Order_Num, Fleet_Id) VALUES ('ORD00012', 'F0000012');
+INSERT INTO FOR_DRONE (Order_Num, Fleet_Id) VALUES ('ORD00013', 'F0000013');
+INSERT INTO FOR_DRONE (Order_Num, Fleet_Id) VALUES ('ORD00014', 'F0000014');
+INSERT INTO FOR_DRONE (Order_Num, Fleet_Id) VALUES ('ORD00015', 'F0000015');
+INSERT INTO FOR_DRONE (Order_Num, Fleet_Id) VALUES ('ORD00016', 'F0000016');
+INSERT INTO FOR_DRONE (Order_Num, Fleet_Id) VALUES ('ORD00017', 'F0000017');
+INSERT INTO FOR_DRONE (Order_Num, Fleet_Id) VALUES ('ORD00018', 'F0000018');
+INSERT INTO FOR_DRONE (Order_Num, Fleet_Id) VALUES ('ORD00019', 'F0000019');
+INSERT INTO FOR_DRONE (Order_Num, Fleet_Id) VALUES ('ORD00020', 'F0000020');
 
 -- Table: FOR_EQUIP
-CREATE TABLE IF NOT EXISTS FOR_EQUIP (
-    Order_Num char(8) not null,
-    Model_Num char(8) not null,
-    Serial_Num char(8) not null,
-    foreign key(Order_Num) references INV_ORDER(Order_Num) ON UPDATE CASCADE,
-    foreign key(Model_Num, Serial_Num) references EQUIPMENT(Model_Num, Serial_Num) ON
-    UPDATE CASCADE
-);
+INSERT INTO FOR_EQUIP (Order_Num, Inv_Id) VALUES ('ORD00021', 'INV00001');
+INSERT INTO FOR_EQUIP (Order_Num, Inv_Id) VALUES ('ORD00022', 'INV00002');
+INSERT INTO FOR_EQUIP (Order_Num, Inv_Id) VALUES ('ORD00023', 'INV00003');
+INSERT INTO FOR_EQUIP (Order_Num, Inv_Id) VALUES ('ORD00024', 'INV00004');
+INSERT INTO FOR_EQUIP (Order_Num, Inv_Id) VALUES ('ORD00025', 'INV00005');
+INSERT INTO FOR_EQUIP (Order_Num, Inv_Id) VALUES ('ORD00026', 'INV00006');
+INSERT INTO FOR_EQUIP (Order_Num, Inv_Id) VALUES ('ORD00027', 'INV00007');
+INSERT INTO FOR_EQUIP (Order_Num, Inv_Id) VALUES ('ORD00028', 'INV00008');
+INSERT INTO FOR_EQUIP (Order_Num, Inv_Id) VALUES ('ORD00029', 'INV00009');
+INSERT INTO FOR_EQUIP (Order_Num, Inv_Id) VALUES ('ORD00030', 'INV00010');
+INSERT INTO FOR_EQUIP (Order_Num, Inv_Id) VALUES ('ORD00031', 'INV00011');
+INSERT INTO FOR_EQUIP (Order_Num, Inv_Id) VALUES ('ORD00032', 'INV00012');
+INSERT INTO FOR_EQUIP (Order_Num, Inv_Id) VALUES ('ORD00033', 'INV00013');
+INSERT INTO FOR_EQUIP (Order_Num, Inv_Id) VALUES ('ORD00034', 'INV00014');
+INSERT INTO FOR_EQUIP (Order_Num, Inv_Id) VALUES ('ORD00035', 'INV00015');
+INSERT INTO FOR_EQUIP (Order_Num, Inv_Id) VALUES ('ORD00036', 'INV00016');
+INSERT INTO FOR_EQUIP (Order_Num, Inv_Id) VALUES ('ORD00037', 'INV00017');
+INSERT INTO FOR_EQUIP (Order_Num, Inv_Id) VALUES ('ORD00038', 'INV00018');
+INSERT INTO FOR_EQUIP (Order_Num, Inv_Id) VALUES ('ORD00039', 'INV00019');
+INSERT INTO FOR_EQUIP (Order_Num, Inv_Id) VALUES ('ORD00040', 'INV00020');
 
 -- Table: INV_ORDER
-CREATE TABLE IF NOT EXISTS INV_ORDER (
-    Order_Num char(8) not null,
-    Value int,
-    Order_Date date,
-    Est_DOA date,
-    Num_Items int,
-    Type varchar(15),
-    Ssn char(9) not null,
-    primary key(Order_Num),
-    foreign key(Ssn) references EMPLOYEE(Ssn) ON UPDATE SET NULL
-);
+INSERT INTO INV_ORDER (Order_Num, Value, Order_Date, Est_DOA, Num_Items, Type, Ssn) VALUES ('ORD00001', 500, '2022-01-01', '2022-01-15', 3, 'Drone', '123456789');
+INSERT INTO INV_ORDER (Order_Num, Value, Order_Date, Est_DOA, Num_Items, Type, Ssn) VALUES ('ORD00002', 1000, '2022-01-02', '2022-01-16', 5, 'Drone', '987654321');
+INSERT INTO INV_ORDER (Order_Num, Value, Order_Date, Est_DOA, Num_Items, Type, Ssn) VALUES ('ORD00003', 250, '2022-01-03', '2022-01-17', 2, 'Drone', '456123789');
+INSERT INTO INV_ORDER (Order_Num, Value, Order_Date, Est_DOA, Num_Items, Type, Ssn) VALUES ('ORD00004', 750, '2022-01-04', '2022-01-18', 4, 'Drone', '789123456');
+INSERT INTO INV_ORDER (Order_Num, Value, Order_Date, Est_DOA, Num_Items, Type, Ssn) VALUES ('ORD00005', 1500, '2022-01-05', '2022-01-19', 6, 'Drone', '123789456');
+INSERT INTO INV_ORDER (Order_Num, Value, Order_Date, Est_DOA, Num_Items, Type, Ssn) VALUES ('ORD00006', 200, '2022-01-06', '2022-01-20', 1, 'Drone', '321654987');
+INSERT INTO INV_ORDER (Order_Num, Value, Order_Date, Est_DOA, Num_Items, Type, Ssn) VALUES ('ORD00007', 350, '2022-01-07', '2022-01-21', 2, 'Drone', '987456123');
+INSERT INTO INV_ORDER (Order_Num, Value, Order_Date, Est_DOA, Num_Items, Type, Ssn) VALUES ('ORD00008', 900, '2022-01-08', '2022-01-22', 3, 'Drone', '654789123');
+INSERT INTO INV_ORDER (Order_Num, Value, Order_Date, Est_DOA, Num_Items, Type, Ssn) VALUES ('ORD00009', 1200, '2022-01-09', '2022-01-23', 5, 'Drone', '789654123');
+INSERT INTO INV_ORDER (Order_Num, Value, Order_Date, Est_DOA, Num_Items, Type, Ssn) VALUES ('ORD00010', 300, '2022-01-10', '2022-01-24', 2, 'Drone', '123987456');
+INSERT INTO INV_ORDER (Order_Num, Value, Order_Date, Est_DOA, Num_Items, Type, Ssn) VALUES ('ORD00011', 600, '2022-01-11', '2022-01-25', 4, 'Drone', '456789123');
+INSERT INTO INV_ORDER (Order_Num, Value, Order_Date, Est_DOA, Num_Items, Type, Ssn) VALUES ('ORD00012', 400, '2022-01-12', '2022-01-26', 3, 'Drone', '321456987');
+INSERT INTO INV_ORDER (Order_Num, Value, Order_Date, Est_DOA, Num_Items, Type, Ssn) VALUES ('ORD00013', 800, '2022-01-13', '2022-01-27', 6, 'Drone', '789123456');
+INSERT INTO INV_ORDER (Order_Num, Value, Order_Date, Est_DOA, Num_Items, Type, Ssn) VALUES ('ORD00014', 175, '2022-01-14', '2022-01-28', 1, 'Drone', '987321654');
+INSERT INTO INV_ORDER (Order_Num, Value, Order_Date, Est_DOA, Num_Items, Type, Ssn) VALUES ('ORD00015', 450, '2022-01-15', '2022-01-29', 3, 'Drone', '456789321');
+INSERT INTO INV_ORDER (Order_Num, Value, Order_Date, Est_DOA, Num_Items, Type, Ssn) VALUES ('ORD00016', 2500, '2022-01-16', '2022-01-30', 8, 'Drone', '654987321');
+INSERT INTO INV_ORDER (Order_Num, Value, Order_Date, Est_DOA, Num_Items, Type, Ssn) VALUES ('ORD00017', 3000, '2022-01-17', '2022-01-31', 10, 'Drone', '123456789');
+INSERT INTO INV_ORDER (Order_Num, Value, Order_Date, Est_DOA, Num_Items, Type, Ssn) VALUES ('ORD00018', 100, '2022-01-18', '2022-02-01', 1, 'Drone', '789654321');
+INSERT INTO INV_ORDER (Order_Num, Value, Order_Date, Est_DOA, Num_Items, Type, Ssn) VALUES ('ORD00019', 1200, '2022-01-19', '2022-02-02', 4, 'Drone', '321654987');
+INSERT INTO INV_ORDER (Order_Num, Value, Order_Date, Est_DOA, Num_Items, Type, Ssn) VALUES ('ORD00020', 900, '2022-01-20', '2022-02-03', 3, 'Drone', '987456321');
+INSERT INTO INV_ORDER (Order_Num, Value, Order_Date, Est_DOA, Num_Items, Type, Ssn) VALUES ('ORD00021', 500, '2022-01-01', '2022-01-15', 3, 'Equipment', '123456789');
+INSERT INTO INV_ORDER (Order_Num, Value, Order_Date, Est_DOA, Num_Items, Type, Ssn) VALUES ('ORD00022', 1000, '2022-01-02', '2022-01-16', 5, 'Equipment', '987654321');
+INSERT INTO INV_ORDER (Order_Num, Value, Order_Date, Est_DOA, Num_Items, Type, Ssn) VALUES ('ORD00023', 250, '2022-01-03', '2022-01-17', 2, 'Equipment', '456123789');
+INSERT INTO INV_ORDER (Order_Num, Value, Order_Date, Est_DOA, Num_Items, Type, Ssn) VALUES ('ORD00024', 750, '2022-01-04', '2022-01-18', 4, 'Equipment', '789123456');
+INSERT INTO INV_ORDER (Order_Num, Value, Order_Date, Est_DOA, Num_Items, Type, Ssn) VALUES ('ORD00025', 1500, '2022-01-05', '2022-01-19', 6, 'Equipment', '123789456');
+INSERT INTO INV_ORDER (Order_Num, Value, Order_Date, Est_DOA, Num_Items, Type, Ssn) VALUES ('ORD00026', 200, '2022-01-06', '2022-01-20', 1, 'Equipment', '321654987');
+INSERT INTO INV_ORDER (Order_Num, Value, Order_Date, Est_DOA, Num_Items, Type, Ssn) VALUES ('ORD00027', 350, '2022-01-07', '2022-01-21', 2, 'Equipment', '987456123');
+INSERT INTO INV_ORDER (Order_Num, Value, Order_Date, Est_DOA, Num_Items, Type, Ssn) VALUES ('ORD00028', 900, '2022-01-08', '2022-01-22', 3, 'Equipment', '654789123');
+INSERT INTO INV_ORDER (Order_Num, Value, Order_Date, Est_DOA, Num_Items, Type, Ssn) VALUES ('ORD00029', 1200, '2022-01-09', '2022-01-23', 5, 'Equipment', '789654123');
+INSERT INTO INV_ORDER (Order_Num, Value, Order_Date, Est_DOA, Num_Items, Type, Ssn) VALUES ('ORD00030', 300, '2022-01-10', '2022-01-24', 2, 'Equipment', '123987456');
+INSERT INTO INV_ORDER (Order_Num, Value, Order_Date, Est_DOA, Num_Items, Type, Ssn) VALUES ('ORD00031', 600, '2022-01-11', '2022-01-25', 4, 'Equipment', '456789123');
+INSERT INTO INV_ORDER (Order_Num, Value, Order_Date, Est_DOA, Num_Items, Type, Ssn) VALUES ('ORD00032', 400, '2022-01-12', '2022-01-26', 3, 'Equipment', '321456987');
+INSERT INTO INV_ORDER (Order_Num, Value, Order_Date, Est_DOA, Num_Items, Type, Ssn) VALUES ('ORD00033', 800, '2022-01-13', '2022-01-27', 6, 'Equipment', '789123456');
+INSERT INTO INV_ORDER (Order_Num, Value, Order_Date, Est_DOA, Num_Items, Type, Ssn) VALUES ('ORD00034', 175, '2022-01-14', '2022-01-28', 1, 'Equipment', '987321654');
+INSERT INTO INV_ORDER (Order_Num, Value, Order_Date, Est_DOA, Num_Items, Type, Ssn) VALUES ('ORD00035', 450, '2022-01-15', '2022-01-29', 3, 'Equipment', '456789321');
+INSERT INTO INV_ORDER (Order_Num, Value, Order_Date, Est_DOA, Num_Items, Type, Ssn) VALUES ('ORD00036', 2500, '2022-01-16', '2022-01-30', 8, 'Equipment', '654987321');
+INSERT INTO INV_ORDER (Order_Num, Value, Order_Date, Est_DOA, Num_Items, Type, Ssn) VALUES ('ORD00037', 3000, '2022-01-17', '2022-01-31', 10, 'Equipment', '123456789');
+INSERT INTO INV_ORDER (Order_Num, Value, Order_Date, Est_DOA, Num_Items, Type, Ssn) VALUES ('ORD00038', 100, '2022-01-18', '2022-02-01', 1, 'Equipment', '789654321');
+INSERT INTO INV_ORDER (Order_Num, Value, Order_Date, Est_DOA, Num_Items, Type, Ssn) VALUES ('ORD00039', 1200, '2022-01-19', '2022-02-02', 4, 'Equipment', '321654987');
+INSERT INTO INV_ORDER (Order_Num, Value, Order_Date, Est_DOA, Num_Items, Type, Ssn) VALUES ('ORD00040', 900, '2022-01-20', '2022-02-03', 3, 'Equipment', '321654987');
 
 -- Table: MEMBER
-CREATE TABLE IF NOT EXISTS MEMBER (
-    User_Id char(8) not null,
-    Fname varchar(15) not null,
-    Lname varchar(15) not null,
-    Addr varchar(30),
-    Phone char(10),
-    Email varchar(40),
-    Start_Date date,
-    Credit_Card char(16),
-    primary key(User_Id)
-);
+INSERT INTO MEMBER (User_Id, Fname, Lname, Addr, Phone, Email, Start_Date, Credit_Card) VALUES ('USR00001', 'John', 'Doe', '123 Main St.', '1234567890', 'john.doe@example.com', '2022-01-01', '1234567890123456');
+INSERT INTO MEMBER (User_Id, Fname, Lname, Addr, Phone, Email, Start_Date, Credit_Card) VALUES ('USR00002', 'Jane', 'Smith', '456 Oak St.', '2345678901', 'jane.smith@example.com', '2022-01-02', '2345678901234567');
+INSERT INTO MEMBER (User_Id, Fname, Lname, Addr, Phone, Email, Start_Date, Credit_Card) VALUES ('USR00003', 'Bob', 'Johnson', '789 Maple St.', '3456789012', 'bob.johnson@example.com', '2022-01-03', '3456789012345678');
+INSERT INTO MEMBER (User_Id, Fname, Lname, Addr, Phone, Email, Start_Date, Credit_Card) VALUES ('USR00004', 'Alice', 'Williams', '321 Cedar St.', '4567890123', 'alice.williams@example.com', '2022-01-04', '4567890123456789');
+INSERT INTO MEMBER (User_Id, Fname, Lname, Addr, Phone, Email, Start_Date, Credit_Card) VALUES ('USR00005', 'Tom', 'Brown', '654 Pine St.', '5678901234', 'tom.brown@example.com', '2022-01-05', '5678901234567890');
+INSERT INTO MEMBER (User_Id, Fname, Lname, Addr, Phone, Email, Start_Date, Credit_Card) VALUES ('USR00006', 'Karen', 'Davis', '987 Elm St.', '6789012345', 'karen.davis@example.com', '2022-01-06', '6789012345678901');
+INSERT INTO MEMBER (User_Id, Fname, Lname, Addr, Phone, Email, Start_Date, Credit_Card) VALUES ('USR00007', 'David', 'Garcia', '159 Birch St.', '7890123456', 'david.garcia@example.com', '2022-01-07', '7890123456789012');
+INSERT INTO MEMBER (User_Id, Fname, Lname, Addr, Phone, Email, Start_Date, Credit_Card) VALUES ('USR00008', 'Sarah', 'Rodriguez', '753 Walnut St.', '8901234567', 'sarah.rodriguez@example.com', '2022-01-08', '8901234567890123');
+INSERT INTO MEMBER (User_Id, Fname, Lname, Addr, Phone, Email, Start_Date, Credit_Card) VALUES ('USR00009', 'Michael', 'Wilson', '246 Oak St.', '9012345678', 'michael.wilson@example.com', '2022-01-09', '9012345678901234');
+INSERT INTO MEMBER (User_Id, Fname, Lname, Addr, Phone, Email, Start_Date, Credit_Card) VALUES ('USR00010', 'Emily', 'Lee', '369 Maple St.', '0123456789', 'emily.lee@example.com', '2022-01-10', '0123456789012345');
+INSERT INTO MEMBER (User_Id, Fname, Lname, Addr, Phone, Email, Start_Date, Credit_Card) VALUES ('USR00011', 'William', 'Taylor', '951 Cedar St.', '1234567890', 'william.taylor@example.com', '2022-01-11', '1234567890123456');
+INSERT INTO MEMBER (User_Id, Fname, Lname, Addr, Phone, Email, Start_Date, Credit_Card) VALUES ('USR00012', 'Samantha', 'Clark', '357 Pine St.', '2345678901', 'samantha.clark@example.com', '2022-01-12', '2345678901234567');
+INSERT INTO MEMBER (User_Id, Fname, Lname, Addr, Phone, Email, Start_Date, Credit_Card) VALUES ('USR00013', 'Ryan', 'Hall', '753 Elm St.', '3456789012', 'ryan.hall@example.com', '2022-01-13', '3456789012345678');
+INSERT INTO MEMBER (User_Id, Fname, Lname, Addr, Phone, Email, Start_Date, Credit_Card) VALUES ('USR00014', 'Melissa', 'Lewis', '951 Birch St.', '4567890123', 'melissa.lewis@example.com', '2022-01-14', '4567890123456789');
+INSERT INTO MEMBER (User_Id, Fname, Lname, Addr, Phone, Email, Start_Date, Credit_Card) VALUES ('USR00015', 'Brandon', 'Young', '357 Walnut St.', '5678901234', 'brandon.young@example.com', '2022-01-15', '5678901234567890');
+INSERT INTO MEMBER (User_Id, Fname, Lname, Addr, Phone, Email, Start_Date, Credit_Card) VALUES ('USR00016', 'Olivia', 'Martin', '753 Oak St.', '6789012345', 'olivia.martin@example.com', '2022-01-16', '6789012345678901');
+INSERT INTO MEMBER (User_Id, Fname, Lname, Addr, Phone, Email, Start_Date, Credit_Card) VALUES ('USR00017', 'Jacob', 'Harris', '246 Maple St.', '7890123456', 'jacob.harris@example.com', '2022-01-17', '7890123456789012');
+INSERT INTO MEMBER (User_Id, Fname, Lname, Addr, Phone, Email, Start_Date, Credit_Card) VALUES ('USR00018', 'Ava', 'Allen', '369 Cedar St.', '8901234567', 'ava.allen@example.com', '2022-01-18', '8901234567890123');
+INSERT INTO MEMBER (User_Id, Fname, Lname, Addr, Phone, Email, Start_Date, Credit_Card) VALUES ('USR00019', 'Emma', 'King', '951 Pine St.', '9012345678', 'emma.king@example.com', '2022-01-19', '9012345678901234');
+INSERT INTO MEMBER (User_Id, Fname, Lname, Addr, Phone, Email, Start_Date, Credit_Card) VALUES ('USR00020', 'Noah', 'Wright', '357 Elm St.', '0123456789', 'noah.wright@example.com', '2022-01-20', '0123456789012345');
 
 -- Table: REVIEW
-CREATE TABLE IF NOT EXISTS REVIEW (
-    Review_Id char(8) not null,
-    Rating char(1),
-    Text varchar(255),
-    User_Id char(8) not null,
-    Model_Num char(8),
-    Serial_Num char(8),
-    primary key(Review_Id),
-    foreign key(User_Id) references MEMBER(User_Id) ON UPDATE SET NULL,
-    foreign key(Model_Num, Serial_Num) references EQUIPMENT(Model_Num, Serial_Num) ON UPDATE CASCADE
-);
+INSERT INTO REVIEW (Review_Id, Rating, Text, User_Id, Inv_Id) VALUES ('REV00001', 5, 'This equipment is amazing!', 'USR00001', 'INV00001');
+INSERT INTO REVIEW (Review_Id, Rating, Text, User_Id, Inv_Id) VALUES ('REV00002', 4, 'Good product overall, but could use some improvements', 'USR00002', 'INV00002');
+INSERT INTO REVIEW (Review_Id, Rating, Text, User_Id, Inv_Id) VALUES ('REV00003', 3, 'Decent equipment, but not worth the price', 'USR00003', 'INV00003');
+INSERT INTO REVIEW (Review_Id, Rating, Text, User_Id, Inv_Id) VALUES ('REV00004', 2, 'Broke after only a few uses', 'USR00004', 'INV00004');
+INSERT INTO REVIEW (Review_Id, Rating, Text, User_Id, Inv_Id) VALUES ('REV00005', 1, 'Horrible experience, would not recommend', 'USR00005', 'INV00005');
+INSERT INTO REVIEW (Review_Id, Rating, Text, User_Id, Inv_Id) VALUES ('REV00006', 4, 'Great product, highly recommended', 'USR00006', 'INV00006');
+INSERT INTO REVIEW (Review_Id, Rating, Text, User_Id, Inv_Id) VALUES ('REV00007', 3, 'Its okay, but there are better options out there', 'USR00007', 'INV00007');
+INSERT INTO REVIEW (Review_Id, Rating, Text, User_Id, Inv_Id) VALUES ('REV00008', 5, 'Absolutely love this equipment, exceeded my expectations', 'USR00008', 'INV00008');
+INSERT INTO REVIEW (Review_Id, Rating, Text, User_Id, Inv_Id) VALUES ('REV00009', 2, 'Not worth the money, disappointed', 'USR00009', 'INV00009');
+INSERT INTO REVIEW (Review_Id, Rating, Text, User_Id, Inv_Id) VALUES ('REV00010', 4, 'Very satisfied with this purchase', 'USR00010', 'INV00010');
+INSERT INTO REVIEW (Review_Id, Rating, Text, User_Id, Inv_Id) VALUES ('REV00011', 3, 'Decent quality, but not the best out there', 'USR00011', 'INV00011');
+INSERT INTO REVIEW (Review_Id, Rating, Text, User_Id, Inv_Id) VALUES ('REV00012', 1, 'Terrible customer service, would not recommend', 'USR00012', 'INV00012');
+INSERT INTO REVIEW (Review_Id, Rating, Text, User_Id, Inv_Id) VALUES ('REV00013', 4, 'Excellent equipment, would buy again', 'USR00013', 'INV00013');
+INSERT INTO REVIEW (Review_Id, Rating, Text, User_Id, Inv_Id) VALUES ('REV00014', 3, 'Average product, nothing special', 'USR00014', 'INV00014');
+INSERT INTO REVIEW (Review_Id, Rating, Text, User_Id, Inv_Id) VALUES ('REV00015', 2, 'Disappointed with the quality', 'USR00015', 'INV00015');
+INSERT INTO REVIEW (Review_Id, Rating, Text, User_Id, Inv_Id) VALUES ('REV00016', 5, 'Couldnt be happier with this equipment', 'USR00016', 'INV00016');
+INSERT INTO REVIEW (Review_Id, Rating, Text, User_Id, Inv_Id) VALUES ('REV00017', 4, 'Great value for the price', 'USR00017', 'INV00017');
+INSERT INTO REVIEW (Review_Id, Rating, Text, User_Id, Inv_Id) VALUES ('REV00018', 3, 'Good product, but not perfect', 'USR00018', 'INV00017');
+INSERT INTO REVIEW (Review_Id, Rating, Text, User_Id, Inv_Id) VALUES ('REV00019', 2, 'Had issues with the equipment from the start', 'USR00019', 'INV00019');
+INSERT INTO REVIEW (Review_Id, Rating, Text, User_Id, Inv_Id) VALUES ('REV00020', 1, 'Worst experience ever, do not buy from this company', 'USR00020', 'INV00020');
 
 -- Table: SUPPLIER
-CREATE TABLE IF NOT EXISTS SUPPLIER (
-    Supp_Id char(8) not null,
-    Name varchar(30) not null,
-    Addr varchar(30),
-    City varchar(30),
-    primary key(Supp_Id)
-);
+INSERT INTO SUPPLIER (Supp_Id, Name, Addr, City) VALUES ('SUP00001', 'ABC Company', '123 Main St', 'New York');
+INSERT INTO SUPPLIER (Supp_Id, Name, Addr, City) VALUES ('SUP00002', 'XYZ Corporation', '456 Elm St', 'Los Angeles');
+INSERT INTO SUPPLIER (Supp_Id, Name, Addr, City) VALUES ('SUP00003', 'Acme Inc.', '789 Maple Ave', 'Chicago');
+INSERT INTO SUPPLIER (Supp_Id, Name, Addr, City) VALUES ('SUP00004', 'Smith & Sons', '101 Oak St', 'Houston');
+INSERT INTO SUPPLIER (Supp_Id, Name, Addr, City) VALUES ('SUP00005', 'Johnson Enterprises', '555 Pine St', 'San Francisco');
+INSERT INTO SUPPLIER (Supp_Id, Name, Addr, City) VALUES ('SUP00006', 'Best Buy Co.', '999 Broadway', 'Seattle');
+INSERT INTO SUPPLIER (Supp_Id, Name, Addr, City) VALUES ('SUP00007', 'Amazon.com Inc.', '777 Market St', 'Boston');
+INSERT INTO SUPPLIER (Supp_Id, Name, Addr, City) VALUES ('SUP00008', 'Big Box Stores', '888 Madison Ave', 'Atlanta');
+INSERT INTO SUPPLIER (Supp_Id, Name, Addr, City) VALUES ('SUP00009', 'Home Depot Inc.', '333 Park Ave', 'Miami');
+INSERT INTO SUPPLIER (Supp_Id, Name, Addr, City) VALUES ('SUP00010', 'Lowes Companies', '444 Fifth Ave', 'Dallas');
+INSERT INTO SUPPLIER (Supp_Id, Name, Addr, City) VALUES ('SUP00011', 'Wal-Mart Stores Inc.', '222 Wall St', 'Philadelphia');
+INSERT INTO SUPPLIER (Supp_Id, Name, Addr, City) VALUES ('SUP00012', 'Target Corporation', '666 Main St', 'Denver');
+INSERT INTO SUPPLIER (Supp_Id, Name, Addr, City) VALUES ('SUP00013', 'Costco Wholesale', '777 Broadway', 'Phoenix');
+INSERT INTO SUPPLIER (Supp_Id, Name, Addr, City) VALUES ('SUP00014', 'Sams Club', '999 Third Ave', 'San Diego');
+INSERT INTO SUPPLIER (Supp_Id, Name, Addr, City) VALUES ('SUP00015', 'Best Buy Co. Inc.', '111 Park St', 'Portland');
+INSERT INTO SUPPLIER (Supp_Id, Name, Addr, City) VALUES ('SUP00016', 'GameStop Corp.', '222 Maple Ave', 'Las Vegas');
+INSERT INTO SUPPLIER (Supp_Id, Name, Addr, City) VALUES ('SUP00017', 'Office Depot Inc.', '333 Elm St', 'Charlotte');
+INSERT INTO SUPPLIER (Supp_Id, Name, Addr, City) VALUES ('SUP00018', 'Staples Inc.', '444 Oak St', 'Washington, D.C.');
+INSERT INTO SUPPLIER (Supp_Id, Name, Addr, City) VALUES ('SUP00019', 'Verizon Communications', '555 Pine St', 'Seattle');
+INSERT INTO SUPPLIER (Supp_Id, Name, Addr, City) VALUES ('SUP00020', 'AT&T Inc.', '666 Fifth Ave', 'Houston');
 
 -- Table: WAREHOUSE
-CREATE TABLE IF NOT EXISTS WAREHOUSE (
-    Addr varchar(30) not null,
-    City varchar(30) not null,
-    Mgr_Fname varchar(15),
-    Mgr_Lname varchar(15),
-    Phone char(10),
-    Equip_Cap int,
-    Drone_Cap int,
-    primary key(Addr, City)
-);
+INSERT INTO WAREHOUSE (Addr, City, Mgr_Fname, Mgr_Lname, Phone, Equip_Cap, Drone_Cap) VALUES ('123 Main St', 'New York', 'John', 'Doe', '1234567890', 50, 20);
+INSERT INTO WAREHOUSE (Addr, City, Mgr_Fname, Mgr_Lname, Phone, Equip_Cap, Drone_Cap) VALUES ('456 Elm St', 'Los Angeles', 'Jane', 'Doe', '2345678901', 75, 30);
+INSERT INTO WAREHOUSE (Addr, City, Mgr_Fname, Mgr_Lname, Phone, Equip_Cap, Drone_Cap) VALUES ('789 Maple Ave', 'Chicago', 'Bob', 'Smith', '3456789012', 100, 40);
+INSERT INTO WAREHOUSE (Addr, City, Mgr_Fname, Mgr_Lname, Phone, Equip_Cap, Drone_Cap) VALUES ('101 Oak St', 'Houston', 'Mary', 'Johnson', '4567890123', 60, 20);
+INSERT INTO WAREHOUSE (Addr, City, Mgr_Fname, Mgr_Lname, Phone, Equip_Cap, Drone_Cap) VALUES ('555 Pine St', 'San Francisco', 'Mike', 'Brown', '5678901234', 70, 25);
+INSERT INTO WAREHOUSE (Addr, City, Mgr_Fname, Mgr_Lname, Phone, Equip_Cap, Drone_Cap) VALUES ('999 Broadway', 'Seattle', 'Amy', 'Lee', '6789012345', 80, 30);
+INSERT INTO WAREHOUSE (Addr, City, Mgr_Fname, Mgr_Lname, Phone, Equip_Cap, Drone_Cap) VALUES ('777 Market St', 'Boston', 'Tom', 'Wong', '7890123456', 90, 35);
+INSERT INTO WAREHOUSE (Addr, City, Mgr_Fname, Mgr_Lname, Phone, Equip_Cap, Drone_Cap) VALUES ('888 Madison Ave', 'Atlanta', 'Jenny', 'Nguyen', '8901234567', 100, 40);
+INSERT INTO WAREHOUSE (Addr, City, Mgr_Fname, Mgr_Lname, Phone, Equip_Cap, Drone_Cap) VALUES ('333 Park Ave', 'Miami', 'Chris', 'Davis', '9012345678', 60, 20);
+INSERT INTO WAREHOUSE (Addr, City, Mgr_Fname, Mgr_Lname, Phone, Equip_Cap, Drone_Cap) VALUES ('444 Fifth Ave', 'Dallas', 'Emily', 'Taylor', '0123456789', 70, 25);
+INSERT INTO WAREHOUSE (Addr, City, Mgr_Fname, Mgr_Lname, Phone, Equip_Cap, Drone_Cap) VALUES ('222 Wall St', 'Philadelphia', 'David', 'Chen', '2345678901', 80, 30);
+INSERT INTO WAREHOUSE (Addr, City, Mgr_Fname, Mgr_Lname, Phone, Equip_Cap, Drone_Cap) VALUES ('666 Main St', 'Denver', 'Sarah', 'Garcia', '3456789012', 90, 35);
+INSERT INTO WAREHOUSE (Addr, City, Mgr_Fname, Mgr_Lname, Phone, Equip_Cap, Drone_Cap) VALUES ('777 Broadway', 'Phoenix', 'Karen', 'Smith', '4567890123', 100, 40);
+INSERT INTO WAREHOUSE (Addr, City, Mgr_Fname, Mgr_Lname, Phone, Equip_Cap, Drone_Cap) VALUES ('999 Third Ave', 'San Diego', 'Kevin', 'Johnson', '5678901234', 50, 20);
+INSERT INTO WAREHOUSE (Addr, City, Mgr_Fname, Mgr_Lname, Phone, Equip_Cap, Drone_Cap) VALUES ('111 Park St', 'Portland', 'Jessica', 'Miller', '6789012345', 75, 30);
+INSERT INTO WAREHOUSE (Addr, City, Mgr_Fname, Mgr_Lname, Phone, Equip_Cap, Drone_Cap) VALUES ('222 Maple Ave', 'Las Vegas', 'Brian', 'Wilson', '7890123456', 80, 30);
+INSERT INTO WAREHOUSE (Addr, City, Mgr_Fname, Mgr_Lname, Phone, Equip_Cap, Drone_Cap) VALUES ('333 Elm St', 'Charlotte', 'Stephanie', 'Lee', '8901234567', 90, 35);
+INSERT INTO WAREHOUSE (Addr, City, Mgr_Fname, Mgr_Lname, Phone, Equip_Cap, Drone_Cap) VALUES ('444 Oak St', 'Washington, D.C.', 'Jason', 'Kim', '9012345678', 100, 40);
+INSERT INTO WAREHOUSE (Addr, City, Mgr_Fname, Mgr_Lname, Phone, Equip_Cap, Drone_Cap) VALUES ('555 Pine St', 'Seattle', 'Olivia', 'Davis', '0123456789', 60, 20);
+INSERT INTO WAREHOUSE (Addr, City, Mgr_Fname, Mgr_Lname, Phone, Equip_Cap, Drone_Cap) VALUES ('666 Fifth Ave', 'Houston', 'Peter', 'Nguyen', '2345678901', 70, 25);
