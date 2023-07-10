@@ -26,7 +26,7 @@ All information related to using the database can be found in the [User Manual](
 
 ## User Interface
 
-An Eclipse project archive is included in the [UI](/UI) subdirectory which implements a simple user interface for executing common queries, along with a .pdf containing screenshots of texample output. To import project in Eclipse (tested with version 2021-06 (4.20.0)), go to File > Open Projects from File System..., click Archive, select the .zip file from this repository, and click Finish.
+An Eclipse project archive is included in the [UI](/UI) subdirectory which implements a simple user interface for executing common queries, along with a .pdf containing screenshots of example output. To import project in Eclipse (tested with version 2021-06 (4.20.0)), go to File > Open Projects from File System..., click Archive, select the .zip file from this repository, and click Finish.
 
 ## Database File
 
