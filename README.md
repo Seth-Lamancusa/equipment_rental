@@ -1,6 +1,6 @@
 # equipment-rental
 
-This repository contains the Equipment Rental Company Database project for CSE 3241 (Section 140-36285). All SQL is written for implementation in SQLite. 
+This repository contains the Equipment Rental Company Database project for CSE 3241 (Section 140-36285). All SQL is written for implementation in SQLite. Project completed by Connor Burke, Luke Alzapiedi, Paul Miller, and I.
 
 The database documents operations for a company that rents out useful equipment for family and community projects  (e.g. house renovations/fixes, plumbing, painting, watering systems, gardening, electrical systems, siding and windows, roof, computer and internet devices, sensors and controllers, etc). The equipment rented is delivered and picked up by a drone. The company has a drone fleet to perform the delivery service to members and warehouses to store equipment.
 
